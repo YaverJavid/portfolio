@@ -1,0 +1,203 @@
+body {
+  font-size: 15pt;
+  margin: 0;
+  background: #151515
+}
+
+
+#menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 40vh;
+  text-align: center;
+  padding: 9vh;
+  padding-top:11.5vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-image: url(images/background2.jpg);
+  background-size: 100% 100%;
+}
+
+.menu-button {
+  font-size: 1.3em;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: bold;
+
+}
+
+.menu-button>* {
+  color: black;
+  text-decoration: none
+}
+
+.menu-button:hover>a {
+  color: whitesmoke;
+  text-shadow: 1px 1px black
+}
+
+.leaf {
+  width: 20vh;
+  position: absolute;
+  top: 0px;
+}
+
+.right-leaf {
+  right: -1vh;
+  transform-origin: right;
+  transition: 450ms;
+  animation: move-leaf 1s ease-in-out infinite;
+}
+
+.left-leaf {
+  left: -3vh;
+  transform-origin: left;
+  transition: 300ms;
+  animation: move-leaf 1.3s linear infinite;
+}
+
+#menu:hover>.right-leaf {
+  transform: rotate(-5deg)
+}
+
+#menu:hover>.left-leaf {
+  transform: rotate(7deg);
+}
+
+
+@keyframes move-leaf {
+  0% {
+    top: 0
+  }
+
+
+  50% {
+    top: -0.2vh
+  }
+
+  100% {
+    top: 0
+  }
+}
+
+
+
+.bush {
+  position: absolute;
+  width: 27vw;
+  bottom: 0;
+  left: 10vh;
+  animation: move-bush 1.3s ease-in-out infinite;
+
+}
+
+@keyframes move-bush {
+  0% {
+    transform: translateX(0)
+  }
+
+  50% {
+    transform: translateX(0.3vh) rotate(2deg);
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}
+
+
+.setting-button {
+  width: 10vw;
+
+}
+
+.settings {
+  background: white;
+  width: 10vw;
+  border-radius: 10vh;
+  height: 10vw;
+  overflow: hidden;
+  transition: 200ms;
+  margin: 1vh;
+}
+
+.disc {
+  width: 30vw;
+  margin-left: 35vw;
+  position: absolute;
+  top: 8vh;
+
+}
+
+.disc-playing {
+  animation: rotate-disc 1.3s linear infinite;
+
+}
+
+@keyframes rotate-disc {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toast {
+  position: absolute;
+  bottom: 22vw;
+  height: 18vw;
+  background: #FFFFFF;
+  border-radius: 100vh;
+  margin-left: 25vw;
+  text-align: center;
+  transition: 400ms;
+  opacity: 0;
+  width: 50vw
+}
+
+.show-toast {
+  opacity: 1
+}
+
+.disc-hinge {
+  position: absolute;
+  top:6vh;
+  width: 3vw;
+  margin-left: 57vw;
+  margin-top: 5vw;
+  transform: rotate(45deg)
+}
+
+#dot-box {
+  position: absolute;
+  position: absolute;
+  right: 5vh;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(90%, -50%);
+}
+
+.dot {
+  width: 1vh;
+  height: 1vh;
+  background: gray;
+  margin-bottom: 1vh;
+  border-radius: 2vh;
+  border: 0.1vh solid black;
+}
+
+.selected-dot {
+  background: white;
+}
+
+.dot:hover{
+  transform: scale(1.1)
+}

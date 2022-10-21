@@ -1,0 +1,44 @@
+body{
+  background: #161618;
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:100vh;
+  justify-content: center;
+
+}
+.credit{
+  width:80vw;
+  height:10vh;
+  background: #FFFFFF;
+  margin-bottom: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10vh;
+  transition: 300ms
+}
+
+.credit-link{
+  color:black;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.credit-heading > a{
+  font-weight: bold;
+     font-size: 2.8rem;
+     color:white;
+  
+
+}
+
+ .credit-heading{
+   background: none
+ }
+
+.credit:hover{
+  width:90vw;
+}
